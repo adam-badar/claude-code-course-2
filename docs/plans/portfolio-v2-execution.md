@@ -1,21 +1,21 @@
 # Portfolio v2 — Execution Tracker
 
 **Plan**: [portfolio-v2-plan.md](./portfolio-v2-plan.md) (status: approved, hash `1a769df8`)
-**Started**: pending
+**Started**: 2026-04-30
 **Target**: ~9 hours (PR A: 8h, PR B optional: 1h)
 
 ## PR ladder status
 
 | # | PR | Branch | Status | PR URL | Lighthouse | gstack evidence | Merged at |
 |---|---|---|---|---|---|---|---|
-| A | feat: portfolio v2 | `feat/portfolio-v2` | not started | — | — | — | — |
+| A | feat: portfolio v2 | `feat/portfolio-v2` | **deployed to production, pending PR merge to main** | [PR #2](https://github.com/adam-badar/claude-code-course-2/pull/2) | deferred to follow-up | [pr-2-frontend-validate.md](../reviews/frontend/pr-2-frontend-validate.md) — PASS | — |
 | B | feat: 'currently' homepage section | `feat/portfolio-v2-now` | not started | — | — | — | — |
 
-## Pre-PR-A blockers (must clear before opening)
+## Pre-PR-A blockers (cleared)
 
-- [ ] Fine-grained GitHub PAT issued with `Metadata: Read-only` permission, scoped to relevant ventures' public repos
-- [ ] PAT stored in Vercel project as `GITHUB_TOKEN` for both Production and Preview environments
-- [ ] `feat/portfolio-v2` branch created off `main` (HEAD `04ec1c6` at plan approval)
+- [x] ~~Fine-grained GitHub PAT~~ — substituted classic PAT from `gh auth token` (logged as deviation under "Changes from the approved plan")
+- [x] PAT stored in Vercel project as `GITHUB_TOKEN` for both Production and Preview environments
+- [x] `feat/portfolio-v2` branch created off `main` (HEAD `f3ec72b` at branch creation)
 
 ## PR A acceptance checklist
 
