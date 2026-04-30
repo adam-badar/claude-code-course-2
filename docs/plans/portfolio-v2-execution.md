@@ -61,11 +61,11 @@ Per plan's PR A row + Verification section:
 
 ## Decisions made during execution
 
-_(populated as PRs land)_
+- **2026-04-30**: PR A started using existing classic PAT from `gh auth token` (broader scopes than the plan's fine-grained `Metadata: Read-only` recommendation). PM accepted this trade-off for execution velocity. Plan-loop not re-run; logged as epic delta only because the change is to token sourcing, not architecture. Risk: classic PAT has broader blast radius if leaked. Mitigation: token stays in Vercel env (server-side only) and is never logged or echoed in code. Migration to fine-grained PAT can happen in a follow-up without touching application code.
 
 ## Changes from the approved plan
 
-_(if any deviations, log them here with rationale; significant deviations require re-running plan-loop per the revalidation conditions)_
+- **Token type deviation (2026-04-30)**: classic PAT (gh CLI) substituted for fine-grained PAT (`Metadata: Read-only`). Application code is unchanged. Migration path: issue fine-grained PAT later, swap the value of `GITHUB_TOKEN` in Vercel; no code changes needed.
 
 ## Compounding (post-merge)
 
